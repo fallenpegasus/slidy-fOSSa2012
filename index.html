@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>Why is Open Source so Good: Thirty Years of Experience to OpenStack</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print" 
+   href="styles/slidy.css" /> 
+  <link rel="stylesheet" type="text/css" media="screen, projection, print" 
+   href="styles/openstack.css" />
+  <script src="scripts/slidy.js" charset="utf-8" type="text/javascript"></script>
+<style>
+div.slide ul {
+font-size: 120%;
+text-align: left;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="background">
+ <div style="position: fixed; right: 5%; bottom: 5%">
+   <img src="images/HP_Blue_RGB_150_SM.png">
+ </div>
+</div>
+
+<div class="slide cover title">
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="graphics/bullet.png" alt="" />
+  <img class="hidden" src="graphics/fold.gif" alt="" />
+  <img class="hidden" src="graphics/unfold.gif" alt="" />
+  <img class="hidden" src="graphics/fold-dim.gif" alt="" />
+  <img class="hidden" src="graphics/nofold-dim.gif" alt="" />
+  <img class="hidden" src="graphics/unfold-dim.gif" alt="" />
+  <img class="hidden" src="graphics/bullet-fold.gif" alt="" />
+  <img class="hidden" src="graphics/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="graphics/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="graphics/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="graphics/bullet-unfold-dim.gif" alt="" />
+
+<img src="graphics/openstack-cloud-software-vertical-large.png"
+ alt="OpenStack logo" class="cover" />
+ <br clear="all" />
+<h1>
+Why is Open Source so Good?<br />
+Thirty Years of Lessons Learned
+</h1>
+<h3>
+Mark Atwood
+&lt;<a href="mailto:mark.atwood@hp.com">mark.atwood@hp.com</a>&gt;
+</h3>
+</div>
+
+<div class="slide center">
+Big Disclaimer
+</div>
+
+<div class="slide center">
+Why is open source software so good?
+</div>
+
+<div class="slide center">
+Why is commerical software so bad?
+</div>
+
+<div class="slide left">
+<h1>We know what makes good software</h1>
+<ul>
+<li>Decoupled Design</li>
+<li>Understood Interfaces</li>
+<li>Iterative Development</li>
+<li>Code Review</li>
+<li>Solid Testing</li>
+<li>Happy Programmers</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Closed Source process</h1>
+<ul>
+<li>"Business Needs" drive developement</li>
+<li>Feature release on meaningless deadlines</li>
+<li>Architecture breaks down</li>
+<li>Developers don't have time or passion</li>
+<li>Code review breaks down</li>
+<li>Difficult process</li>
+<li>Yet too easy to commit</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Technical Debt</h1>
+<ul>
+<li>Never time to do things right.</li>
+<li>Rarely time to do things over.</li>
+<li>Very bad software is kept alive because it makes money.</li>
+</ul>
+</div>
+
+<div class="slide center">
+Open Source at different scales:
+</div>
+
+<div class="slide">
+<h1>One programmer</h1>
+<ul>
+<li>Does it because he "has an itch"</li>
+<li>Probably going to make it work.</li>
+<li>Won't make it too complex to understand.</li>
+<li>Exists as long as it's useful.</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>One maintainer plus contributors.</h1>
+<ul>
+<li>He will code review everything.</li>
+<li>He's not going to break it.</li>
+<li>If it remains useful, someone will maintain it</li>
+<li>Contributors mean useful features</li>
+<li>Contributors means "Linus's Law"</li>
+</ul>
+</div>
+
+<div class="slide center">
+Linus's Law: <br />
+With enough eyeballs,  <br />
+all bugs are shallow.
+</div>
+
+<div class="slide">
+<h1>Small Team</h1>
+<ul>
+<li>Will work on code that makes them happy.</li>
+<li>Can't force work they don't want.</li>
+<li>Encourages decoupled design.</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Large team, on large projects.</h1>
+<ul>
+<li>Can Open Source possibly work?</li>
+<li>Lots of failures</li>
+<li>Lots of very painful successes</li>
+<li>Lots of lessons learned.</li>
+</ul>
+</div>
+
+<div class="slide center">
+Big Disclaimer
+</div>
+
+<div class="slide">
+<h1>GCC & Gnu BinUtils</h1>
+<ul>
+<li>Tightly coupled team</li>
+<li>Tightly coupled design</li>
+<li>Resistant to outside contributors.</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Conway's Law</h1>
+<ul>
+<li>The organization of the software and the organization of the software team will be congruent.</li>
+<li>"If you have four groups working on a compiler, you'll get a 4-pass compiler".</li>
+<li>"Loosely coupled teams will result in loosely coupled software".</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Linux</h1>
+<ul>
+<li>Really Big "One developer with contributors"</li>
+<li>We got lucky.</li>
+<li>Cannot clone Linuses.</li>
+<li>We discovered Linus's Law</li>
+<li>We discovered DVCS</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Java & JCP</h1>
+<ul>
+<li>Developed "corporate style"</li>
+<li>Unhappy developers</li>
+<li>Dominated by one company</li>
+<li>Closed test, QA, cert</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>JCP & ASF Java</h1>
+<ul>
+<li>"Deep rich APIs"</li>
+<li>APIs coupled to implementation</li>
+<li>Huge piles of "donated" code</li>
+<li>Uninvolved "maintainers"</li>
+<li>Discovered that big companies can collaborate</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>MySQL</h1>
+<ul>
+<li>Dominated by one company</li>
+<li>Tightly coupled design</li>
+<li>Features driven by Marketing Goals</li>
+<li>Feature Release instead of Time Release</li>
+<li>Hard to build</li>
+<li>Very resistant to outside contributions</li>
+<li>Code review fell apart</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>We Learned Lessons</h1>
+<ul>
+<li>Easy to get involved</li>
+<li>Easy to contribute</li>
+<li>Easy development tooling</li>
+<li>Loose coupling</li>
+<li>Code Review is critical</li>
+<li>Collaboration tooling</li>
+<li>Face to Face Meetings</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>OpenStack</h1>
+<ul>
+<li>Not dominated by one company</li>
+<li>Business goals cannot override the development process</li>
+<li>Code review is central</li>
+<li>APIs are HTTP REST WSGI</li>
+<li>Very loosely coupled</li>
+<li>Time Based Release</li>
+<li>Human can't commit to trunk</li>
+</ul>
+</div>
+
+<div class="slide">
+<img src="graphics/openstack-cloud-software-vertical-large.png"
+ alt="OpenStack logo" class="cover" />
+ <br clear="all" />
+<ul>
+<li>Join the Foundation<li>
+<li>Join the Technical Community<li>
+<li>Contribute</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Open Source</h1>
+<ul>
+<li>Apache 2.0 License</li>
+<li>Public Distributed Source Repositories (Git)</li>
+<li>Open Source Language (Python)</li>
+<li>Open Source Framework (HTTP, REST, WSGI)
+</ul>
+</div>
+
+<div class="slide">
+<h1>Open Design</h1>
+<ul>
+<li>Meritocracy</li>
+<li>Decisions by Technical Community</li>
+<li>Service API Orientation</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Open Development</h1>
+<ul>
+<li>Distributed Source Control (Git)</li>
+<li>Public Code Review</li>
+<li>Project Infrastructure is Open Source</li>
+<li>Test Framework is Open Source</li>
+<li>Anyone can run DevStack</li>
+<li>Anyone can run the tests</li>
+<li>Anyone can run a production OpenStack cloud</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Open Participation</h1>
+<ul>
+<li>Egalitarian Process</li>
+<li>Open Design Summits, in Person</li>
+<li>Open Meetings, in IRC</li>
+<li>"Show Up and Contribute" membership to Technical Community<li>
+<li>Technical Leaders chosen by the Technical Community</li>
+<li>Representation on Foundation Board</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Gated Trunk</h1>
+<ul>
+<li>Ensures Code Quality</li>
+<li>Protects developers<ul>
+  <li>Always start from working code</li>
+</ul><li>Protects tree<ul>
+  <li>Bad code never merges</li>
+</ul><li>Egalitarian<ul>
+  <li>Same for everyone</li>
+  <li>Transparent</li>
+  <li>Automated</li>
+</ul></ul>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Open Source works when</h1>
+<ul>
+<li>Decoupled Design</li>
+<li>Code Review</li>
+<li>Easy participation</li>
+<li>Avoid corporate anti-patterns</li>
+</ul>
+</div>
+
+
+
+<div class="slide center">
+Thank You. Questions?
+<br />
+<br />
+&lt;<a href="mailto:mark.atwood@hp.com">mark.atwood@hp.com</a>&gt;
+</div>
+
+</body>
+
+</html>
